@@ -33,6 +33,28 @@ class oneToOneController extends Controller
         $country = $location->country()->get()->first();
 
         echo $country->name;
+        
+    }
 
+
+    public function oneToOneInsert()
+    {
+        $dataForm = [
+            'name' => 'Conchichina',
+            'latitude' => '444',
+            'longitude' => '888 ',
+        ];
+
+        $country = Country::create($dataForm);
+
+        /* $location = new Location;
+        $location->latitude = $dataForm['latitude'];
+        $location->longitude = $dataForm['longitude'];
+        $location->country_id = $country->id;
+        $saveLocation = $location->save(); */
+
+        $location = $country->location()->create($dataForm);    
+        var_dump($location);
+      
     }
 }
