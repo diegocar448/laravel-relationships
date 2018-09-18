@@ -13,12 +13,12 @@ class OneToManyController extends Controller
         $keySearch = 'a';
 
         //$country = Country::where('name', 'Brasil')->get()->first();
-        $countries = Country::where('name', 'LIKE', "%{$keySearch}%")->get();
+        $countries = Country::where('name', 'LIKE', "%{$keySearch}%")->with('states')->get();
         foreach($countries as $country)
         {        
             echo "<b>{$country->name}</b>"; 
 
-            $states = $country->states()->get();
+            $states = $country->states;
 
             foreach($states as $state)
             {
