@@ -19,6 +19,9 @@ $this->get('one-to-many-insert-two', 'OneToManyController@oneToManyInsertTwo');
 //Has Many Through
 $this->get('has-many-through', 'OneToManyController@hasManyThrough');
 
+//Many to Many
+$this->get('many-to-many', 'ManyToManyController@manyToMany');
+
 
 Route::get('/', function () {
     return view('welcome');
