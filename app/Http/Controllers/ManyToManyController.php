@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\City;
+use App\Models\Company;
+
 
 class ManyToManyController extends Controller
 {
@@ -17,5 +19,18 @@ class ManyToManyController extends Controller
         {
             echo "<b>{$company->name}</b><br>";
         }
+    }
+
+    public function manyToManyInverse()
+    {
+        $company = Company::where('name', 'Empresa Orion')->get()->first();
+        echo "<b>{$company->name}</b><br>";
+
+        $cities = $company->cities;
+        foreach($cities as $city)
+        {
+            echo "<b>{$city->name}</b><br>";
+        }
+        
     }
 }
