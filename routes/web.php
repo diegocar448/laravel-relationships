@@ -23,6 +23,9 @@ $this->get('has-many-through', 'OneToManyController@hasManyThrough');
 $this->get('many-to-many', 'ManyToManyController@manyToMany');
 $this->get('many-to-many-inverse', 'ManyToManyController@manyToManyInverse');
 
+//Relarion Polymorphics
+$this->get('polymorphics', 'PolymorphicController@polimorphic');
+
 
 Route::get('/', function () {
     return view('welcome');

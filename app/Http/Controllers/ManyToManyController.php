@@ -30,7 +30,6 @@ class ManyToManyController extends Controller
         foreach($cities as $city)
         {
             echo "<b>{$city->name}</b><br>";
-        }
-        
+        }        
     }
 }
