@@ -12,4 +12,9 @@ class City extends Model
         //adicionamos após a virgula o 'company_city e o laravel irá reconhece-lo'
         return $this->belongsToMany(Company::class, 'company_city');
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }

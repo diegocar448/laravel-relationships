@@ -24,7 +24,7 @@ $this->get('many-to-many', 'ManyToManyController@manyToMany');
 $this->get('many-to-many-inverse', 'ManyToManyController@manyToManyInverse');
 
 //Relarion Polymorphics
-$this->get('polymorphics', 'PolymorphicController@polimorphic');
+$this->get('polymorphics-insert', 'PolymorphicController@polymorphicInsert');
 
 
 Route::get('/', function () {
