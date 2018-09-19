@@ -24,6 +24,7 @@ $this->get('many-to-many', 'ManyToManyController@manyToMany');
 $this->get('many-to-many-inverse', 'ManyToManyController@manyToManyInverse');
 
 //Relarion Polymorphics
+$this->get('polymorphics', 'PolymorphicController@polymorphic');
 $this->get('polymorphics-insert', 'PolymorphicController@polymorphicInsert');
 
 
